@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+    <link rel="icon" href="icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="head">
+      Currently, the code editor is in the development phase. More programming
+      languages will be supported soon.
+      <img
+        src="close.png"
+        height="10px"
+        style="padding-top: 5px; padding-left: 5px; cursor: pointer"
+        onclick="handleClick()"
+      />
+    </div>
+    <img class="img" src="logo.png" alt="" srcset="" />
+    <h1> ByteEditor </h1>
+    <p>
+      Discover real-time code editing with immediate previews and comprehensive error detection. Effortlessly customize and test responsive designs. Collaborate smoothly with integrated sharing tools and access a wide range of templates. Our platform supports integration with popular libraries and frameworks, providing a productive coding experience tailored to your requirements.
+    </p>
+    <div class="container">
+      <div class="box">
+        <a href="Python/python.html">Python Compiler</a>
+      </div>
+      <div class="box">
+        <a href="JavaScript/javascript.html">JavaScript Compiler</a>
+      </div>
+      <div class="box">
+        <a href="./Web D/webD.html">HTML, CSS, JavaScript Editor</a>
+      </div>
+    </div>
+    <script>
+      function handleClick() {
+        const head = document.querySelector(".head");
+
+        head.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

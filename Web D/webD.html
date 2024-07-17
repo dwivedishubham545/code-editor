@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="code_container">
+            <textarea name="html" id="html" cols="30" rows="10" placeholder="Type your HTML code here"></textarea>
+            <textarea name="css" id="css" cols="30" rows="10" placeholder="Type your CSS code here"></textarea>
+            <textarea name="JavaScript" id="javascript" cols="30" rows="10" placeholder="Type your JavaScript code here"></textarea>
+        </div>
+        <div class="viewer_container">
+            <iframe id="viewer"></iframe>
+        </div>    
+    </div>
+    <script>
+
+let viewer = document.querySelector("#viewer")
+
+let alltext = document.querySelectorAll(".code_container textarea")
+let html, css, javascript = ""
+
+alltext.forEach((e, index) => {
+    e.addEventListener("keyup" , () =>{
+        if(index == 0){
+            html = e.value
+          
+        }
+        if(index == 1){
+            css = e.value
+        }
+        if(index == 2){
+            javascript = e.value
+        }
+
+         viewer.contentDocument.body.innerHTML = html
+         viewer.contentDocument.head.innerHTML = `<style>${css}</style>`
+         viewer.contentWindow.eval(javascript)
+    })
+})
+
+
+    </script>
+</body>
+</html>
